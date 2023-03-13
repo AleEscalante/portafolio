@@ -9,9 +9,8 @@ Llaves de encriptación
 - La letra "u" es convertida para "ufat"
 
 ## Requisitos
-
-    Solo se aceptan letras minúsculas del alfabeto latino (a-z)
-    No deben ser utilizados letras con acentos ni caracteres especiales
+- Solo se aceptan letras minúsculas del alfabeto latino (a-z).
+- No deben ser utilizados letras con acentos ni caracteres especiales.
 
 ## Funcionalidades
 
