@@ -2,12 +2,11 @@
 
 Este es un proyecto de una aplicación encriptadora de texto, desarrollada en JavaScript, HTML y CSS. La aplicación utiliza un conjunto de llaves de encriptación para transformar el texto original en un texto encriptado, y viceversa.
 Llaves de encriptación
-
-    La letra "e" es convertida para "enter"
-    La letra "i" es convertida para "imes"
-    La letra "a" es convertida para "ai"
-    La letra "o" es convertida para "ober"
-    La letra "u" es convertida para "ufat"
+- La letra "e" es convertida para "enter".
+- La letra "i" es convertida para "imes".
+- La letra "a" es convertida para "ai".
+- La letra "o" es convertida para "ober".
+- La letra "u" es convertida para "ufat"
 
 ## Requisitos
 
