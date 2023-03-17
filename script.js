@@ -57,15 +57,44 @@ function desencriptar(desencriptado) {
 }
 
 function btnDesencriptar() {
-    const textoDesencriptado = desencriptar(textArea.value);
-    mensajeEncriptado.value = textoDesencriptado;
-    textArea.value = "";
-    mensajeEncriptado.style.backgroundImage = "/imagenes/Muñeco.png";
+    if (document.querySelector(".text-area").value.trim().length != 0) {
+        const textoDesencriptado = desencriptar(textArea.value);
+        mensajeEncriptado.value = textoDesencriptado;
+        textArea.value = "";
+        mensajeEncriptado.style.backgroundImage = "none";
+        copia.style.display = "block";
+    } else {
+        alert("No se ha introducido texto valido")
+        location.reload();
+    }
 }
 
 function copiar() {
     mensajeEncriptado.select();
     navigator.clipboard.writeText(mensajeEncriptado.value)
     mensajeEncriptado.value = "";
-    alert("Texto Copiado")
+
+    let textoCopiado = document.querySelector('#texto-copiado');
+    textoCopiado.style.display = "block";
+
+    setTimeout(function () {
+        textoCopiado.style.display = "none";
+    }, 2000);
+
+    mensajeEncriptado.style.backgroundImage = 'url("/imagenes/Muñeco.png")';
+    document.getElementById("text-area").focus();
+    copia.style.display = "none";
 }
+
+function limpiarTexto() {
+    document.querySelector(".mensaje-encriptado").value = "";
+}
+
+function evitarMayusculas(e) {
+    if (e.getModifierState('CapsLock') || e.shiftKey) {
+        e.preventDefault();
+    }
+}
+
+// Agregar el evento keydown al textarea
+textArea.addEventListener('keydown', evitarMayusculas);

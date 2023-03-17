@@ -12,13 +12,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body onload="limpiarTexto()">
     <header>
         <img class="logo" src="imagenes/Frame 6.png" alt="Logo de Alura">
     </header>
     <main>
         <section>
-            <textarea class="text-area" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+            <textarea class="text-area" id="text-area" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
             <div>
                 <h6 class="informacion">Solo letras minúsculas y sin acentos</h6>
             </div>
@@ -29,8 +29,9 @@
         </section>
         <section>
             <textarea class="mensaje-encriptado" cols="20" rows="10"></textarea>
-            <div>
+            <div class="botones">
                 <button class="btn-copiar" onclick="copiar()">Copiar</button>
+                <span class="texto-copiado" id="texto-copiado">Texto copiado!</span>
             </div>
         </section>
     </main>
