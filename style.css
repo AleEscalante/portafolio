@@ -59,6 +59,12 @@ main {
     outline: none;
 }
 
+button:hover {
+    background-color: #ffa60090;
+    color: #000;
+    cursor: pointer;
+}
+
 .botones {
     display: flex;
     margin-top: 18px;
@@ -97,6 +103,24 @@ main {
     width: 336px;
 }
 
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    70% {
+        opacity: 0.25;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
 .texto-copiado {
     display: none;
     height: 67px;
@@ -105,6 +129,7 @@ main {
     position: absolute;
     width: 300px;
     color: #0A3871;
+    animation: fade-out 5s linear;
 }
 
 .informacion {
