@@ -81,7 +81,7 @@ function copiar() {
         textoCopiado.style.display = "none";
     }, 2000);
 
-    mensajeEncriptado.style.backgroundImage = 'url("/imagenes/Muñeco.png")';
+    mensajeEncriptado.style.backgroundImage = 'url("imagenes/Muñeco.png")';
     document.getElementById("text-area").focus();
     copia.style.display = "none";
 }
